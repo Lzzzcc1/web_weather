@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block page_content %}
+    <table class="table table-bordered">
+    <tr>
+        <th>日期</th>
+        <th>最高温</th>
+        <th>最低温</th>
+        <th>天气</th>
+        <th>风向</th>
+        <th>城市</th>
+    </tr>
+        {% for i in u %}
+            <tr>
+                <td>{{ i.date }}</td>
+                <td>{{ i.highest }}</td>
+                <td>{{ i.lowest }}</td>
+                <td>>{{ i.weather }}</td>
+                <td>{{ i.wind }}</td>
+                <td>{{ i.city }}</td>
+            </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}

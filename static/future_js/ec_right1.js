@@ -1,0 +1,54 @@
+var ec_right1 = echarts.init(document.getElementById("r1"),"white");
+
+option_right1 = {
+	title: {
+		text: '未来十五天天气统计',
+		textStyle: {
+			color: 'black'
+		},
+		left: 'left'
+	},
+	// grid: {
+	// 	left: 50,
+	// 	top: 50,
+	// 	right: 0,
+	// 	width: '87%',
+	// 	height: 320,
+	// },
+	color: ['#3398DB'],
+	tooltip: {
+		trigger: 'axis',
+		axisPointer: {
+			type: 'shadow'
+		}
+	},
+
+	//工具框，可以选择
+    toolbox: {
+      	feature: {
+      		saveAsImage: {} //下载工具
+      	}
+    },
+	//全局字体样式
+	// textStyle: {
+	// 	fontFamily: 'PingFangSC-Medium',
+	// 	fontSize: 12,
+	// 	color: '#858E96',
+	// 	lineHeight: 12
+	// },
+	xAxis: {
+		type: 'category',
+		//                              scale:true,
+		data: []
+	},
+	yAxis: {
+		type: 'value',
+		//坐标轴刻度设置
+		},
+	series: [{
+		type: 'bar',
+		data: [],
+		barMaxWidth: "50%"
+	}]
+};
+ec_right1.setOption(option_right1)
